@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Portafolio PASEC</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- ── Progress bar ─────────────────────────────────────── -->
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+
+  <!-- ── Hamburger ────────────────────────────────────────── -->
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  SIDEBAR                                               -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <nav class="sidebar" id="sidebar" aria-label="Navegación principal">
+    <div class="sidebar-brand">
+      <div class="brand-name">E-Portafolio</div>
+      <!-- EDITAR: Tu nombre completo, carrera y semestre -->
+      <div class="brand-sub">PASEC · 2026</div>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <ul class="sidebar-nav">
+      <li class="nav-item active" data-target="hero">
+        <div class="nav-icon">🏠</div>
+        <span class="nav-text">Inicio</span>
+        <span class="nav-number">00</span>
+      </li>
+      <li class="nav-item" data-target="seccion1">
+        <div class="nav-icon">📄</div>
+        <span class="nav-text">Aprendizaje</span>
+        <span class="nav-number">01</span>
+      </li>
+      <li class="nav-item" data-target="seccion2">
+        <div class="nav-icon">🌿</div>
+        <span class="nav-text">Ciudadanía</span>
+        <span class="nav-number">02</span>
+      </li>
+      <li class="nav-item" data-target="seccion3">
+        <div class="nav-icon">✨</div>
+        <span class="nav-text">Valores</span>
+        <span class="nav-number">03</span>
+      </li>
+      <li class="nav-item" data-target="seccion4">
+        <div class="nav-icon">🎯</div>
+        <span class="nav-text">Compromisos</span>
+        <span class="nav-number">04</span>
+      </li>
+      <li class="nav-item" data-target="seccion5">
+        <div class="nav-icon">🎬</div>
+        <span class="nav-text">Video Carta</span>
+        <span class="nav-number">05</span>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      Curso PASEC<br>
+      <!-- EDITAR: nombre de tu universidad -->
+      Universidad · 2026
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  MAIN CONTENT                                          -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <main class="main">
+
+    <!-- ════════════════════════════════════════════════════ -->
+    <!--  HERO                                               -->
+    <!-- ════════════════════════════════════════════════════ -->
+    <section id="hero" data-section="hero" class="hero">
+      <!-- Decorative SVG blobs -->
+      <div class="hero-bg" aria-hidden="true">
+        <!-- Blob 1 – top right -->
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#2C4A3E" d="M422,316Q386,382,319,413Q252,444,188,414Q124,384,86,319Q48,254,79,185Q110,116,177,81Q244,46,313,73Q382,100,421,177Q460,254,422,316Z" />
+        </svg>
+        <!-- Blob 2 – bottom left -->
+        <svg class="blob2" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#B8873A" d="M424,302Q392,354,338,388Q284,422,224,407Q164,392,118,346Q72,300,74,237Q76,174,120,130Q164,86,228,64Q292,42,345,80Q398,118,430,184Q462,250,424,302Z" />
+        </svg>
+      </div>
+      <div class="hero-accent-line"></div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="dot"></div>
+          <span class="label">Participación y Servicio Comunitario</span>
+        </div>
+
+        <h1>Mi<br><em style="color:var(--forest)">E-Portafolio</em><br>PASEC</h1>
+
+        <p class="hero-subtitle">
+          <!-- EDITAR: descripción breve de tu experiencia o semestre -->
+          Un recorrido reflexivo por mis aprendizajes, valores y compromisos adquiridos
+          a lo largo del curso y mis horas de servicio comunitario.
+        </p>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="meta-label">Estudiante</span>
+            <!-- EDITAR: tu nombre completo -->
+            <span class="meta-value">Nombre Completo</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="meta-label">Carrera</span>
+            <!-- EDITAR: tu carrera -->
+            <span class="meta-value">Nombre de la Carrera</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="meta-label">Semestre</span>
+            <!-- EDITAR: tu semestre -->
+            <span class="meta-value">N° Semestre · 2026</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="meta-label">Organización</span>
+            <!-- EDITAR: organización donde realizaste horas de servicio -->
+            <span class="meta-value">Nombre de la Organización</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+        Desplázate para explorar
+      </div>
+    </section><!-- /hero -->
+
+
+    <!-- ════════════════════════════════════════════════════ -->
+    <!--  SECCIÓN 1 — APRENDIZAJE                           -->
+    <!-- ════════════════════════════════════════════════════ -->
+    <section id="seccion1" data-section="seccion1" class="section">
+      <div class="section-header reveal">
+        <div class="section-number">01</div>
+        <div class="section-title-block">
+          <span class="label">Producto mejorado</span>
+          <h2>Reflexión sobre mi Aprendizaje</h2>
+          <p class="section-desc">
+            Un producto elaborado en clase que refleja uno de mis mayores aprendizajes del curso.
+          </p>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <!-- Imagen / documento del producto -->
+        <div class="product-image-zone reveal reveal-delay-1">
+          <!-- EDITAR: reemplaza esta sección con la imagen o PDF de tu producto mejorado -->
+          <!-- Opción A – imagen:
+               <img src="assets/producto.jpg" alt="Descripción del producto" />
+          -->
+          <!-- Opción B – PDF embed:
+               <iframe src="assets/producto.pdf" width="100%" height="100%" style="border:0;"></iframe>
+          -->
+          <div class="product-image-placeholder">
+            <div class="ph-icon">📋</div>
+            <p style="max-width:none;font-size:.85rem;">
+              Inserta aquí la imagen o PDF<br>de tu producto mejorado
+            </p>
+          </div>
+        </div>
+
+        <!-- Reflexión escrita -->
+        <div class="reveal reveal-delay-2">
+          <div class="card">
+            <div class="card-icon">💡</div>
+            <h3 style="margin-bottom:1rem;color:var(--forest);">Mi mayor aprendizaje</h3>
+
+            <!-- EDITAR: escribe tu reflexión de 300-350 palabras.
+                 Responde:
+                 • ¿Qué aprendiste?
+                 • ¿Por qué fue relevante?
+                 • ¿Cómo te impactó (personal / profesional)?
+                 • ¿Cómo conecta con tu experiencia de servicio?
+            -->
+            <div class="placeholder-text">
+              <span class="ph-badge">Por editar</span>
+              <p>
+                Escribe aquí tu reflexión de 300 a 350 palabras sobre el producto mejorado.
+                Incluye: qué aprendiste, por qué fue relevante, cómo te impactó
+                (personal y/o profesionalmente) y cómo conecta con tu experiencia
+                de servicio comunitario.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /seccion1 -->
+
+
+    <!-- ════════════════════════════════════════════════════ -->
+    <!--  SECCIÓN 2 — CIUDADANÍA RESPONSABLE                -->
+    <!-- ════════════════════════════════════════════════════ -->
+    <section id="seccion2" data-section="seccion2" class="section">
+      <div class="section-header reveal">
+        <div class="section-number">02</div>
+        <div class="section-title-block">
+          <span class="label">Ciudadanía responsable</span>
+          <h2>Reflexión sobre Ciudadanía</h2>
+          <p class="section-desc">
+            Mi deber, mis definiciones y la evolución de mi comprensión sobre ciudadanía responsable.
+          </p>
+        </div>
+      </div>
+
+      <!-- Deber -->
+      <div class="duty-block reveal">
+        <div class="duty-label">Mi deber sobre ciudadanía responsable</div>
+        <!-- EDITAR: inserta el texto de tu deber tal como lo escribiste -->
+        <div class="placeholder-text" style="background:rgba(245,240,232,.08);border-color:rgba(245,240,232,.2);">
+          <span class="ph-badge">Por editar</span>
+          <p style="color:rgba(245,240,232,.7);">
+            Inserta aquí el texto completo de tu deber sobre ciudadanía responsable,
+            tal como fue entregado en clase.
+          </p>
+        </div>
+      </div>
+
+      <!-- Definiciones comparadas -->
+      <div class="citizenship-grid">
+        <div class="definition-block reveal reveal-delay-1">
+          <h4>Primera definición <span style="color:var(--gold);font-weight:300;">(inicial)</span></h4>
+          <!-- EDITAR: copia tu primera definición de ciudadanía responsable (del deber) -->
+          <div class="placeholder-text">
+            <span class="ph-badge">Por editar</span>
+            <p>Escribe aquí tu primera definición de ciudadanía responsable,
+               extraída de tu deber inicial.</p>
+          </div>
+        </div>
+
+        <div class="definition-block reveal reveal-delay-2" style="border-left-color:var(--forest);background:rgba(44,74,62,.06);">
+          <h4>Segunda definición <span style="color:var(--forest);font-weight:300;">(portafolio)</span></h4>
+          <!-- EDITAR: escribe tu nueva definición propia basada en lo aprendido y vivido -->
+          <div class="placeholder-text">
+            <span class="ph-badge">Por editar</span>
+            <p>Escribe aquí tu definición propia de ciudadanía responsable,
+               basada en lo aprendido y vivido durante el curso.</p>
+          </div>
+        </div>
+
+        <!-- Comparación -->
+        <div class="comparison-box reveal">
+          <div class="card">
+            <div class="card-icon">🔄</div>
+            <h3 style="color:var(--forest);margin-bottom:1rem;">Comparación entre mis definiciones</h3>
+            <!-- EDITAR: escribe la comparación de 300-350 palabras.
+                 Responde: ¿Qué cambió? ¿Por qué cambió? ¿Qué se mantuvo? ¿Por qué?
+            -->
+            <div class="placeholder-text">
+              <span class="ph-badge">Por editar · 300–350 palabras</span>
+              <p>
+                Compara aquí tu primera y segunda definición de ciudadanía responsable.
+                Explica qué cambió, por qué cambió, qué se mantuvo y por qué se mantuvo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /seccion2 -->
+
+
+    <!-- ════════════════════════════════════════════════════ -->
+    <!--  SECCIÓN 3 — VALORES                               -->
+    <!-- ════════════════════════════════════════════════════ -->
+    <section id="seccion3" data-section="seccion3" class="section">
+      <div class="section-header reveal">
+        <div class="section-number">03</div>
+        <div class="section-title-block">
+          <span class="label">Valores esenciales</span>
+          <h2>Tres Valores que Guían mi Acción Ciudadana</h2>
+          <p class="section-desc">
+            Los valores que definen quién soy como ciudadano y cómo los viví en mis horas de servicio.
+          </p>
+        </div>
+      </div>
+
+      <div class="values-grid">
+
+        <!-- VALOR 1 -->
+        <div class="value-card reveal reveal-delay-1">
+          <div class="value-number">01</div>
+          <!-- EDITAR: nombre del primer valor -->
+          <div class="value-name">Nombre del valor</div>
+
+          <!-- EDITAR: explicación del valor y cómo lo aplicaste (o te diste cuenta de su importancia) -->
+          <div class="placeholder-text" style="background:rgba(245,240,232,.06);border-color:rgba(245,240,232,.15);">
+            <span class="ph-badge">Por editar</span>
+            <p style="color:rgba(245,240,232,.7);max-width:none;font-size:.85rem;">
+              ¿Por qué es importante en tu accionar ciudadano?
+              ¿Cómo lo aplicaste durante tus horas de servicio?
+            </p>
+          </div>
+          <!-- EDITAR: ejemplo o anécdota breve -->
+          <div class="value-tag">✓ Aplicado en servicio</div>
+        </div>
+
+        <!-- VALOR 2 -->
+        <div class="value-card reveal reveal-delay-2" style="background:var(--gold);">
+          <div class="value-number" style="color:var(--forest);">02</div>
+          <!-- EDITAR: nombre del segundo valor -->
+          <div class="value-name" style="color:var(--forest);">Nombre del valor</div>
+
+          <div class="placeholder-text" style="background:rgba(44,74,62,.08);border-color:rgba(44,74,62,.15);">
+            <span class="ph-badge" style="background:var(--forest);">Por editar</span>
+            <p style="color:rgba(28,28,30,.7);max-width:none;font-size:.85rem;">
+              ¿Por qué es importante en tu accionar ciudadano?
+              ¿Cómo lo aplicaste durante tus horas de servicio?
+            </p>
+          </div>
+          <div class="value-tag" style="background:rgba(44,74,62,.15);color:var(--forest);">✓ Aplicado en servicio</div>
+        </div>
+
+        <!-- VALOR 3 -->
+        <div class="value-card reveal reveal-delay-3" style="background:var(--rust);">
+          <div class="value-number" style="color:var(--gold-light);">03</div>
+          <!-- EDITAR: nombre del tercer valor -->
+          <div class="value-name" style="color:var(--gold-light);">Nombre del valor</div>
+
+          <div class="placeholder-text" style="background:rgba(245,240,232,.08);border-color:rgba(245,240,232,.15);">
+            <span class="ph-badge" style="background:var(--gold);">Por editar</span>
+            <p style="color:rgba(245,240,232,.8);max-width:none;font-size:.85rem;">
+              ¿Por qué es importante en tu accionar ciudadano?
+              ¿Cómo lo aplicaste durante tus horas de servicio?
+            </p>
+          </div>
+          <div class="value-tag">✓ Aplicado en servicio</div>
+        </div>
+
+      </div>
+    </section><!-- /seccion3 -->
+
+
+    <!-- ════════════════════════════════════════════════════ -->
+    <!--  SECCIÓN 4 — COMPROMISOS                           -->
+    <!-- ════════════════════════════════════════════════════ -->
+    <section id="seccion4" data-section="seccion4" class="section">
+      <div class="section-header reveal">
+        <div class="section-number">04</div>
+        <div class="section-title-block">
+          <span class="label">Compromisos personales</span>
+          <h2>Dos Compromisos como Estudiante y Futuro Profesional</h2>
+          <p class="section-desc">
+            Compromisos específicos y realistas que asumo a partir de esta experiencia.
+          </p>
+        </div>
+      </div>
+
+      <div class="commitments-table-wrapper reveal">
+        <table class="commitments">
+          <thead>
+            <tr>
+              <th>Compromiso</th>
+              <th>Indicadores<br><small style="font-weight:400;opacity:.7;">¿Cómo evaluarás su cumplimiento?</small></th>
+              <th>Acciones concretas<br><small style="font-weight:400;opacity:.7;">Mínimo 4 acciones</small></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="role-badge student">Como estudiante</span><br>
+                <!-- EDITAR: escribe tu compromiso como estudiante (específico y realista) -->
+                <div class="placeholder-text" style="margin-top:.5rem;">
+                  <span class="ph-badge">Por editar</span>
+                  <p>Describe tu compromiso como estudiante de forma específica y realista.</p>
+                </div>
+              </td>
+              <td>
+                <!-- EDITAR: cómo evaluarás si se cumple -->
+                <div class="placeholder-text">
+                  <span class="ph-badge">Por editar</span>
+                  <p>¿Cómo vas a evaluar que este compromiso se cumpla?</p>
+                </div>
+              </td>
+              <td>
+                <!-- EDITAR: mínimo 4 acciones concretas -->
+                <ol class="actions-list" type="1">
+                  <li>Acción concreta 1 (por editar)</li>
+                  <li>Acción concreta 2 (por editar)</li>
+                  <li>Acción concreta 3 (por editar)</li>
+                  <li>Acción concreta 4 (por editar)</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="role-badge professional">Como profesional</span><br>
+                <!-- EDITAR: escribe tu compromiso como futuro profesional -->
+                <div class="placeholder-text" style="margin-top:.5rem;">
+                  <span class="ph-badge">Por editar</span>
+                  <p>Describe tu compromiso como futuro profesional de forma específica y realista.</p>
+                </div>
+              </td>
+              <td>
+                <!-- EDITAR: cómo evaluarás si se cumple -->
+                <div class="placeholder-text">
+                  <span class="ph-badge">Por editar</span>
+                  <p>¿Cómo vas a evaluar que este compromiso se cumpla?</p>
+                </div>
+              </td>
+              <td>
+                <!-- EDITAR: mínimo 4 acciones concretas -->
+                <ol class="actions-list" type="1">
+                  <li>Acción concreta 1 (por editar)</li>
+                  <li>Acción concreta 2 (por editar)</li>
+                  <li>Acción concreta 3 (por editar)</li>
+                  <li>Acción concreta 4 (por editar)</li>
+                </ol>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section><!-- /seccion4 -->
+
+
+    <!-- ════════════════════════════════════════════════════ -->
+    <!--  SECCIÓN 5 — VIDEO CARTA                           -->
+    <!-- ════════════════════════════════════════════════════ -->
+    <section id="seccion5" data-section="seccion5" class="section">
+      <div class="section-header reveal">
+        <div class="section-number">05</div>
+        <div class="section-title-block">
+          <span class="label">Video carta</span>
+          <h2>Una Carta para Mí en 10 Años</h2>
+          <p class="section-desc">
+            Un mensaje en formato storytelling dirigido a mi yo del futuro.
+          </p>
+        </div>
+      </div>
+
+      <div class="video-section-inner">
+
+        <!-- Video embed -->
+        <div class="video-wrapper reveal">
+          <!--
+            EDITAR: reemplaza el bloque .video-placeholder por el iframe de YouTube.
+            Usa el siguiente formato:
+            <iframe
+              src="https://www.youtube.com/embed/TU_VIDEO_ID"
+              title="Video carta PASEC"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          -->
+          <div class="video-placeholder">
+            <div class="play-icon">▶</div>
+            <p>Inserta aquí el enlace de YouTube de tu video carta</p>
+          </div>
+        </div>
+
+        <!-- Preguntas respondidas en el video -->
+        <div class="reveal reveal-delay-1" style="margin-top:2rem;">
+          <span class="label" style="display:block;margin-bottom:1rem;">Preguntas abordadas en el video</span>
+
+          <div class="video-questions">
+            <!-- Obligatorias -->
+            <div class="question-chip">
+              <div class="q-badge">O</div>
+              <span>Reflexión personal: ¿Cómo han influido las horas de servicio comunitario en mis metas y propósitos de vida a largo plazo?</span>
+            </div>
+            <div class="question-chip">
+              <div class="q-badge">O</div>
+              <span>Reflexión profesional: ¿De qué manera esta experiencia influyó en mi preparación profesional? ¿Fortalezas y áreas de mejora?</span>
+            </div>
+
+            <!-- Opcionales (EDITAR: marca las 2 que respondiste cambiando la clase a "selected") -->
+            <!--
+              Opciones disponibles – descomenta las 2 que hayas seleccionado:
+
+              <div class="question-chip" style="border-color:var(--gold);background:rgba(184,135,58,.05);">
+                <div class="q-badge" style="background:var(--forest);">★</div>
+                <span>¿Cómo era mi visión sobre el servicio comunitario antes de PASEC y cómo cambió?</span>
+              </div>
+
+              <div class="question-chip" style="border-color:var(--gold);background:rgba(184,135,58,.05);">
+                <div class="q-badge" style="background:var(--forest);">★</div>
+                <span>¿Qué aprendí sobre la población con la que trabajé?</span>
+              </div>
+
+              <div class="question-chip" style="border-color:var(--gold);background:rgba(184,135,58,.05);">
+                <div class="q-badge" style="background:var(--forest);">★</div>
+                <span>¿Qué habilidades blandas desarrollé o fortalecí?</span>
+              </div>
+
+              <div class="question-chip" style="border-color:var(--gold);background:rgba(184,135,58,.05);">
+                <div class="q-badge" style="background:var(--forest);">★</div>
+                <span>¿Cuáles fueron los principales desafíos y qué aprendí de ellos?</span>
+              </div>
+
+              <div class="question-chip" style="border-color:var(--gold);background:rgba(184,135,58,.05);">
+                <div class="q-badge" style="background:var(--forest);">★</div>
+                <span>¿Siento que esta experiencia generó un proceso de transformación en mí?</span>
+              </div>
+
+              <div class="question-chip" style="border-color:var(--gold);background:rgba(184,135,58,.05);">
+                <div class="q-badge" style="background:var(--forest);">★</div>
+                <span>¿Hubo un momento o anécdota que me marcó de forma especial?</span>
+              </div>
+
+              <div class="question-chip" style="border-color:var(--gold);background:rgba(184,135,58,.05);">
+                <div class="q-badge" style="background:var(--forest);">★</div>
+                <span>¿Qué valoraron más los beneficiarios o el staff de mi contribución?</span>
+              </div>
+            -->
+
+            <!-- Placeholder mientras editas -->
+            <div class="placeholder-text">
+              <span class="ph-badge">Por editar</span>
+              <p>Descomenta las 2 preguntas opcionales que respondiste en tu video. Están listadas como comentarios HTML arriba de esta sección.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info técnica del video -->
+        <div class="card reveal reveal-delay-2" style="margin-top:2rem;">
+          <h4 style="color:var(--forest);margin-bottom:1rem;">Información del video</h4>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+            <div class="hero-meta-item">
+              <span class="meta-label">Nombre completo</span>
+              <!-- EDITAR -->
+              <span class="meta-value" style="font-size:.9rem;">Nombre Completo</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="meta-label">Carrera y semestre</span>
+              <!-- EDITAR -->
+              <span class="meta-value" style="font-size:.9rem;">Carrera · N° Semestre</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="meta-label">Organización</span>
+              <!-- EDITAR -->
+              <span class="meta-value" style="font-size:.9rem;">Nombre de la organización</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="meta-label">Grupo atendido</span>
+              <!-- EDITAR: niños, adolescentes, adultos, adultos mayores, personas con discapacidad, medio ambiente, etc. -->
+              <span class="meta-value" style="font-size:.9rem;">Grupo atendido</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /video-section-inner -->
+    </section><!-- /seccion5 -->
+
+  </main><!-- /main -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+/* ============================================================
+   E-PORTAFOLIO — Animations & Keyframes
+   All @keyframes and animation utility classes
+   ============================================================ */
+
+/* ── Page entrance ────────────────────────────────────────── */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Hero entrance sequence ───────────────────────────────── */
+
+.hero-eyebrow {
+  animation: fadeInLeft .7s ease both;
+  animation-delay: .1s;
+}
+
+.hero h1 {
+  animation: fadeInUp .8s ease both;
+  animation-delay: .25s;
+}
+
+.hero-subtitle {
+  animation: fadeInUp .7s ease both;
+  animation-delay: .4s;
+}
+
+.hero-meta {
+  animation: fadeInUp .7s ease both;
+  animation-delay: .55s;
+}
+
+.hero-scroll-hint {
+  animation: fadeIn .8s ease both;
+  animation-delay: 1s;
+}
+
+/* ── Blob float ───────────────────────────────────────────── */
+
+@keyframes floatBlob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33%       { transform: translateY(-18px) rotate(3deg); }
+  66%       { transform: translateY(10px) rotate(-2deg); }
+}
+
+.hero-bg svg {
+  animation: floatBlob 14s ease-in-out infinite;
+}
+
+.hero-bg .blob2 {
+  animation: floatBlob 18s ease-in-out infinite reverse;
+}
+
+/* ── Sidebar nav item hover pulse ─────────────────────────── */
+
+@keyframes navPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(184, 135, 58, .35); }
+  70%  { box-shadow: 0 0 0 8px rgba(184, 135, 58, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(184, 135, 58, 0); }
+}
+
+.nav-item.active .nav-icon {
+  animation: navPulse 2.4s ease-out infinite;
+}
+
+/* ── Scroll bounce (scroll hint arrow) ────────────────────── */
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
+/* already used inline in main.css; kept here for canonical reference */
+
+/* ── Progress bar shimmer ─────────────────────────────────── */
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+.progress-fill {
+  background: linear-gradient(
+    90deg,
+    var(--forest) 0%,
+    var(--gold) 40%,
+    var(--gold-light) 50%,
+    var(--gold) 60%,
+    var(--forest) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ── Card hover glow ──────────────────────────────────────── */
+
+@keyframes cardGlow {
+  0%, 100% { box-shadow: var(--shadow-soft); }
+  50%       { box-shadow: 0 8px 40px rgba(44, 74, 62, .18); }
+}
+
+/* ── Value card entrance stagger ──────────────────────────── */
+
+.values-grid .value-card:nth-child(1) { animation-delay: .1s; }
+.values-grid .value-card:nth-child(2) { animation-delay: .22s; }
+.values-grid .value-card:nth-child(3) { animation-delay: .34s; }
+
+/* ── Reveal utility classes ───────────────────────────────── */
+/*
+   .reveal is the base class (opacity/transform set in main.css).
+   Additional flavors:
+*/
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(.96);
+  transition: opacity .65s ease, transform .65s ease;
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Placeholder dashed-border breathing ──────────────────── */
+
+@keyframes dashBreath {
+  0%, 100% { border-color: rgba(44, 74, 62, .2); }
+  50%       { border-color: rgba(184, 135, 58, .35); }
+}
+
+.placeholder-text {
+  animation: dashBreath 3.5s ease-in-out infinite;
+}
+
+/* ── Sidebar slide-in ─────────────────────────────────────── */
+
+@keyframes sidebarIn {
+  from { transform: translateX(-260px); }
+  to   { transform: translateX(0); }
+}
+
+/* Applied via JS class; declared here for reference */
+
+/* ── Definition block — slide from left ───────────────────── */
+
+.definition-block {
+  animation: fadeInLeft .6s ease both;
+}
+
+.definition-block:nth-child(2) {
+  animation-delay: .15s;
+  animation-name: fadeInUp;  /* second block comes from below for variety */
+}
+
+/* ── Table row highlight pulse on hover ───────────────────── */
+
+@keyframes rowHighlight {
+  from { background-color: var(--blush); }
+  to   { background-color: transparent; }
+}
+
+/* ── Video play icon pulse ────────────────────────────────── */
+
+@keyframes playPulse {
+  0%, 100% { transform: scale(1);    box-shadow: 0 0 0 0   rgba(184, 135, 58, .5); }
+  50%       { transform: scale(1.06); box-shadow: 0 0 0 12px rgba(184, 135, 58, 0); }
+}
+
+.video-placeholder .play-icon {
+  animation: playPulse 2.2s ease-in-out infinite;
+}
+
+/* ── Dot blink (hero eyebrow) ─────────────────────────────── */
+
+@keyframes dotBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .35; }
+}
+
+.hero-eyebrow .dot {
+  animation: dotBlink 2.8s ease-in-out infinite;
+}
+
+/* ── Reduced-motion overrides ─────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

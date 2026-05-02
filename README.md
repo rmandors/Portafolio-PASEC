@@ -14,6 +14,7 @@ Portafolio-PASEC/
 │   ├── main.js
 │   └── nav.js
 └── assets/
+    ├── docs/
     ├── icons/ 
-    └── img/
+    └── imgs/
 ```

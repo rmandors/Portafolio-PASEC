@@ -420,6 +420,7 @@
      margin-bottom: .75rem;
      font-style: normal;
    }
+
    
    /* ── Product section ───────────────────────────────────────── */
    .product-grid {
@@ -429,18 +430,32 @@
      align-items: start;
    }
    .product-image-zone {
-     aspect-ratio: 4/3;
      background: var(--blush);
      border-radius: var(--radius-md);
      display: flex;
+     flex-direction: column;
      align-items: center;
-     justify-content: center;
-     overflow: hidden;
+     justify-content: flex-start;
      border: 1px solid rgba(44,74,62,.1);
+     padding: 1.25rem;
+     gap: .75rem;
    }
    .product-image-zone img {
-     width: 100%; height: 100%; object-fit: cover;
+     width: 100%;
+     height: auto;
+     object-fit: contain;
+     border-radius: var(--radius-sm);
+     display: block;
    }
+   .product-image-zone img:nth-child(2) {
+     width: 8rem;
+     height: auto;
+   }
+   .product-image-zone img:nth-child(4) {
+    width: 8rem;
+    height: auto;
+  }
+
    .product-image-placeholder {
      text-align: center;
      color: var(--ink-muted);
@@ -474,6 +489,42 @@
      grid-column: 1/-1;
      margin-top: 1rem;
    }
+
+   /* ── Comparison card con imagen lateral ──────────────────── */
+  .comparison-card-inner {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .comparison-text-col {
+    flex: 1 1 0;          /* ocupa todo el espacio disponible */
+    min-width: 0;
+  }
+
+  .comparison-img-col {
+    flex: 0 0 180px;      /* ancho fijo para la imagen; ajústalo a tu gusto */
+    display: flex;
+    align-items: stretch;
+  }
+
+  .comparison-side-img {
+    width: auto;
+    height: auto;
+    border-radius: var(--radius-sm);
+    display: block;
+  }
+
+  /* En móvil: imagen va debajo del texto */
+  @media (max-width: 768px) {
+    .comparison-card-inner {
+      flex-direction: column;
+    }
+    .comparison-img-col {
+      flex: 0 0 auto;
+      height: 300px;      /* altura fija en móvil */
+    }
+  }
    
    /* ── Values section ────────────────────────────────────────── */
    .values-grid {

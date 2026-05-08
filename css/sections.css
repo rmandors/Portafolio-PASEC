@@ -58,8 +58,10 @@
 #seccion1 .product-image-zone::before {
   content: '';
   position: absolute;
-  top: 0; left: 0;
-  width: 60px; height: 60px;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
   border-top: 3px solid var(--gold);
   border-left: 3px solid var(--gold);
   border-radius: var(--radius-sm) 0 0 0;
@@ -69,8 +71,10 @@
 #seccion1 .product-image-zone::after {
   content: '';
   position: absolute;
-  bottom: 0; right: 0;
-  width: 60px; height: 60px;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
   border-bottom: 3px solid var(--forest);
   border-right: 3px solid var(--forest);
   border-radius: 0 0 var(--radius-sm) 0;
@@ -127,7 +131,7 @@
 }
 
 /* Ensure content in value-cards sits above decorative pseudo-elements */
-.value-card > * {
+.value-card>* {
   position: relative;
   z-index: 1;
 }
@@ -142,8 +146,10 @@
 .commitments-table-wrapper::after {
   content: '';
   position: absolute;
-  top: 0; right: 0;
-  width: 40px; height: 100%;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
   background: linear-gradient(90deg, transparent, rgba(237, 229, 213, .6));
   pointer-events: none;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
@@ -154,6 +160,7 @@
   .commitments-table-wrapper {
     position: relative;
   }
+
   .commitments-table-wrapper::after {
     display: block;
   }
@@ -161,11 +168,19 @@
 
 /* Table column widths */
 table.commitments th:nth-child(1),
-table.commitments td:nth-child(1) { width: 30%; }
+table.commitments td:nth-child(1) {
+  width: 30%;
+}
+
 table.commitments th:nth-child(2),
-table.commitments td:nth-child(2) { width: 25%; }
+table.commitments td:nth-child(2) {
+  width: 40%;
+}
+
 table.commitments th:nth-child(3),
-table.commitments td:nth-child(3) { width: 45%; }
+table.commitments td:nth-child(3) {
+  width: 40%;
+}
 
 /* Numbered action items using CSS counter */
 .actions-list {
@@ -190,6 +205,30 @@ table.commitments td:nth-child(3) { width: 45%; }
   top: .15em;
 }
 
+/* Fancy bullets for Indicadores */
+.fancy-bullets {
+  list-style: none;
+  padding-left: 0;
+}
+
+.fancy-bullets li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.fancy-bullets li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.8rem;
+  top: 0.1em;
+}
+
 /* ── SECTION 5 — VIDEO CARTA ─────────────────────────────── */
 
 #seccion5 {
@@ -201,18 +240,21 @@ table.commitments td:nth-child(3) { width: 45%; }
 .video-wrapper::after {
   content: '';
   position: absolute;
-  width: 20px; height: 20px;
+  width: 20px;
+  height: 20px;
   z-index: 2;
 }
 
 .video-wrapper::before {
-  top: -8px; left: -8px;
+  top: -8px;
+  left: -8px;
   border-top: 3px solid var(--gold);
   border-left: 3px solid var(--gold);
 }
 
 .video-wrapper::after {
-  bottom: -8px; right: -8px;
+  bottom: -8px;
+  right: -8px;
   border-bottom: 3px solid var(--forest);
   border-right: 3px solid var(--forest);
 }
@@ -242,7 +284,8 @@ table.commitments td:nth-child(3) { width: 45%; }
   font-size: .78rem;
   letter-spacing: .06em;
   border-top: 3px solid var(--gold);
-  margin-left: 0; /* inside .main, inherits margin-left from parent */
+  margin-left: 0;
+  /* inside .main, inherits margin-left from parent */
 }
 
 .site-footer strong {
@@ -258,13 +301,18 @@ table.commitments td:nth-child(3) { width: 45%; }
 /* ── PRINT ────────────────────────────────────────────────── */
 
 @media print {
+
   .sidebar,
   .hamburger,
   .overlay,
   .progress-bar,
-  .hero-scroll-hint { display: none !important; }
+  .hero-scroll-hint {
+    display: none !important;
+  }
 
-  .main { margin-left: 0 !important; }
+  .main {
+    margin-left: 0 !important;
+  }
 
   .section {
     break-inside: avoid;
